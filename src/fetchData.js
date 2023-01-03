@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 let element = '';
 const grid = document.querySelector('.grid');
 const gridLogic = (data) => {
