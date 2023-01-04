@@ -3,8 +3,8 @@ let element = '';
 const grid = document.querySelector('.grid');
 const gridLogic = (data) => {
   element += `<div class="grid-item">
-  <div class="imageContainer"><img src=${data.sprites.front_default} /></div>
-  <h3>${data.species.name}</h3>
+ <img class="pokeimg" src=${data.sprites.front_default} />
+  <h3 class="pokename">${data.species.name}</h3>
   <div class="buttonContainer"><button>Comments</button><button>Reservation</button></div>
   </div>`;
   grid.innerHTML = element;

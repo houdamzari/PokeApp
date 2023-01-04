@@ -1,21 +1,36 @@
-body {
-  background: #fff;
-}
 .grid {
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: #2196f3;
   padding: 10px;
 }
+
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color: rgb(72, 182, 255);
+  margin: 2%;
   padding: 20px;
   font-size: 30px;
   text-align: center;
+  border-radius: 10px;
 }
+
 .buttonContainer {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+.pokeimg {
+  height: 200px;
+  width: auto;
+  /* z-index: 2; */
+}
+
+.pokeimg::after {
+  content: "";
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-color: #fff;
+  opacity: .7;
+
 }
