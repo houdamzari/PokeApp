@@ -1,3 +1,5 @@
 import './style.css';
-import { fetchData } from './fetchData';
+
+import { fetchData } from './fetchData.js';
+
 fetchData();
