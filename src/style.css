@@ -1,11 +1,15 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   padding: 10px;
 }
 
 .grid-item {
-  background-color: rgb(72, 182, 255);
+  background-color: rgb(255, 222, 133);
   margin: 2%;
   padding: 20px;
   font-size: 30px;
@@ -22,15 +26,4 @@
 .pokeimg {
   height: 200px;
   width: auto;
-  /* z-index: 2; */
-}
-
-.pokeimg::after {
-  content: "";
-  width: 300px;
-  height: 300px;
-  border-radius: 100%;
-  background-color: #fff;
-  opacity: .7;
-
 }
