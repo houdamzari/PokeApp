@@ -375,7 +375,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  font-family: Helvetica, sans-serif;\r\n  background-color: rgb(255, 197, 37);\r\n}\r\n\r\n.navigation {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  padding: 0 4%;\r\n}\r\n\r\n.logo {\r\n  width: 200px;\r\n  position: absolute;\r\n}\r\n\r\n.pokemon {\r\n  width: 300px;\r\n  height: 100px;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-repeat: no-repeat;\r\n}\r\n\r\n.navigation ul {\r\n  display: flex;\r\n  list-style: none;\r\n}\r\n\r\n.navigation ul li {\r\n  margin-right: 1.5rem;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: inherit;\r\n}\r\n\r\n.grid {\r\n  display: grid;\r\n  grid-template-columns: auto auto auto auto;\r\n  padding: 10px;\r\n}\r\n\r\n.grid-item {\r\n  background-color: white;\r\n  margin: 2%;\r\n  padding: 20px;\r\n  font-size: 30px;\r\n  text-align: center;\r\n  border-radius: 10px;\r\n}\r\n\r\n.buttonContainer {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 5px;\r\n}\r\n\r\n.pokeimg {\r\n  width: 200px;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  font-family: cursive, sans-serif;\r\n  background-image: linear-gradient(to right top, #242424, #2f2e34, #383946, #414558, #48516b, #4e587a, #545f8a, #5c6699, #6b68a6, #7e69b0, #9468b8, #ac65bc);\r\n}\r\n\r\n.navigation {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  padding: 0 4%;\r\n}\r\n\r\n.pokemon {\r\n  width: 80px;\r\n  height: 80px;\r\n  background-size: contain;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-repeat: no-repeat;\r\n}\r\n\r\n.navigation ul {\r\n  display: flex;\r\n  list-style: none;\r\n}\r\n\r\n.newComment li {\r\n  font-size: 0.75rem;\r\n  margin: 2% 0;\r\n}\r\n\r\n.navigation ul li {\r\n  margin-right: 1.5rem;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: white;\r\n}\r\n\r\n.grid {\r\n  display: grid;\r\n  grid-template-columns: auto auto auto auto auto;\r\n  padding: 10px;\r\n}\r\n\r\n.grid-item {\r\n  background: rgb(238, 174, 202);\r\n  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);\r\n  margin: 2%;\r\n  padding: 20px;\r\n  font-size: 30px;\r\n  text-align: center;\r\n  border-radius: 10px;\r\n}\r\n\r\n.buttonContainer {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 5px;\r\n}\r\n\r\n.pokeimg {\r\n  width: 200px;\r\n}\r\n\r\n.newComment,\r\n.comment-form {\r\n  margin: 2% auto;\r\n}\r\n\r\n.comment-form {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 1rem;\r\n  width: 40%;\r\n  padding-bottom: 5%;\r\n  margin: 0 auto;\r\n}\r\n\r\n.newComment {\r\n  list-style: none;\r\n  width: 38%;\r\n  border: 0.5px solid rgb(104, 193, 245);\r\n  height: 4rem;\r\n  overflow-y: scroll;\r\n  padding: 1%;\r\n  border-radius: 5px;\r\n  background: white;\r\n}\r\n\r\n.newComment::-webkit-scrollbar {\r\n  display: none;\r\n}\r\n\r\n.popup {\r\n  background: rgb(231, 231, 231);\r\n  width: 60vw;\r\n  margin: 4% auto;\r\n  border-radius: 10px;\r\n  position: fixed;\r\n  inset: 5%;\r\n  transform: translateY(150%);\r\n}\r\n\r\n.modal {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n#commentcount {\r\n  margin: 0;\r\n}\r\n\r\n.closecontain {\r\n  display: flex;\r\n  flex-direction: row-reverse;\r\n  padding: 2%;\r\n}\r\n\r\n#closepop {\r\n  color: white;\r\n  background: red;\r\n  width: 1.5rem;\r\n  height: 1.5rem;\r\n  border-radius: 5px;\r\n  text-align: center;\r\n}\r\n\r\n#closepop p {\r\n  transform: rotate(45deg);\r\n  font-size: 1.2rem;\r\n  cursor: pointer;\r\n  margin-left: 2px;\r\n  margin-top: -2px;\r\n}\r\n\r\ninput {\r\n  border-radius: 5px;\r\n  padding: 2%;\r\n  outline: 0;\r\n  border: 0;\r\n}\r\n\r\n.submit-comment {\r\n  background: rgb(0, 155, 216);\r\n  border: 0;\r\n  width: 30%;\r\n  padding: 3% 5%;\r\n  color: white;\r\n  border-radius: 5px;\r\n  align-self: center;\r\n}\r\n\r\nbutton {\r\n  cursor: pointer;\r\n}\r\n\r\n.showpop {\r\n  transform: translateY(0);\r\n  transition: transform 0.2s;\r\n}\r\n\r\n.pokename {\r\n  color: #3d1d5e;\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -535,17 +535,87 @@ __webpack_require__.r(__webpack_exports__);
 
 let element = '';
 const grid = document.querySelector('.grid');
+const appId = '91WxoTjxGWkdx6jiMCZQ';
+const baseURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}`;
+const SubmitBtn = document.querySelector('.submit-comment');
+const Name = document.querySelector('#name');
+const Comment = document.querySelector('#comment');
+const PopUp = document.querySelector('.popup');
+const CloseBtn = document.querySelector('.closebtn');
+const MainBody = document.querySelector('.main');
+const NewComments = document.querySelector('.newComment');
+
+//* ***fetch comment and show to the popup */
+const fetchComment = async (itemId) => {
+  const response = await fetch(`${baseURL}/comments?item_id=${itemId}`);
+  const data = await response.json();
+  const Comments = await data;
+  NewComments.innerHTML = '';
+  if (response.status === 200) {
+    Comments.forEach((element) => {
+      NewComments.innerHTML += `
+            <li>${element.creation_date} ${element.username} : ${element.comment}</li>
+            `;
+    });
+  } else {
+    NewComments.innerHTML = '';
+  }
+};
+
+//* **Add comment function*/
+const addComment = async (itemId, username, comment) => {
+  await fetch(`${baseURL}/comments?item_id=${itemId}`, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+    body: JSON.stringify({
+      item_id: itemId,
+      username,
+      comment,
+    }),
+  });
+  fetchComment(itemId);
+};
+
+//* **Send comments to the API : depends on addComment function*/
+SubmitBtn.addEventListener('click', () => {
+  const reqId = SubmitBtn.getAttribute('id');
+  addComment(reqId, Name.value, Comment.value);
+  Name.value = '';
+  Comment.value = '';
+});
+
+//* **Close button behaviour */
+CloseBtn.addEventListener('click', () => {
+  PopUp.classList.remove('showpop');
+  NewComments.innerHTML = '';
+  MainBody.style.filter = 'blur(0)';
+});
+
+//* **Load data after fetching data from Poke API */
 const gridLogic = (data) => {
   element += `<div class="grid-item">
  <img class="pokeimg" src=${data.sprites.other['official-artwork'].front_default} />
   <h3 class="pokename">${data.species.name}</h3>
-  <div class="buttonContainer"><button type="button" class="commentbtn">Comments</button></div>
+  <div class="buttonContainer"><button class="commentbtn" id="${data.species.name}">Comment</button></div>
   </div>`;
   grid.innerHTML = element;
+  const commentButton = document.querySelectorAll('.commentbtn');
+
+  //* **Comment button behaviour inside the Pokemon Cards */
+  commentButton.forEach((element) => element.addEventListener('click', (e) => {
+    const commentId = e.target.id;
+    PopUp.classList.add('showpop');
+    MainBody.style.filter = 'blur(10px)';
+    fetchComment(commentId);
+    SubmitBtn.setAttribute('id', commentId);
+  }));
 };
 
-const fetchData = async () => {
-  await axios__WEBPACK_IMPORTED_MODULE_0__["default"].get(' https://pokeapi.co/api/v2/pokemon?limit=20&offset=0')
+//* **Fetch Pokemons from Poke API */
+const fetchData = () => {
+  axios__WEBPACK_IMPORTED_MODULE_0__["default"].get(' https://pokeapi.co/api/v2/pokemon?limit=40&offset=0')
     .then((res) => {
       const data = res.data.results;
       data.forEach((el) => {
@@ -553,7 +623,6 @@ const fetchData = async () => {
       });
     });
 };
-
 
 /***/ }),
 /* 14 */

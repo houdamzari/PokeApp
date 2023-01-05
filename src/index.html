@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>JavaScript Capstone</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Capstone</title>
+</head>
 
-    <body>
+<body>
+    <main class="main">
         <header>
-
             <nav class="navigation">
 
                 <div class='pokemon'></div>
@@ -22,6 +24,29 @@
             </nav>
         </header>
         <div class="grid"></div>
-    </body>
+    </main>
+    <div class="popup">
+        <div class="closecontain">
+            <div id="closepop">
+                <p class="closebtn">+</p>
+            </div>
+        </div>
+        <div class="modal">
+            <ul class="newComment">
+            </ul>
+            <div class="comment-form">
+                <input type="text"
+                    id="name"
+                    required
+                    placeholder="Your Name (Required)">
+                <input type="text"
+                    id="comment"
+                    required
+                    placeholder="Your Comment">
+                <button type="button"
+                    class="submit-comment">comment</button>
+            </div>
+        </div>
+</body>
 
 </html>
