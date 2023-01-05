@@ -5,12 +5,12 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _fetchData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(13);
+/* harmony import */ var _modules_fetchData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(13);
 
 
 
 
-(0,_fetchData_js__WEBPACK_IMPORTED_MODULE_1__.fetchData)();
+(0,_modules_fetchData_js__WEBPACK_IMPORTED_MODULE_1__.fetchData)();
 
 
 /***/ }),
