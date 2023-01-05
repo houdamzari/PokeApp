@@ -1,5 +1,31 @@
 body {
   font-family: Helvetica, sans-serif;
+  background-color: rgb(255, 197, 37);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+}
+
+.logo {
+  width: 200px;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+}
+
+.navigation ul li {
+  margin-right: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .grid {
@@ -9,7 +35,7 @@ body {
 }
 
 .grid-item {
-  background-color: rgb(255, 222, 133);
+  background-color: white;
   margin: 2%;
   padding: 20px;
   font-size: 30px;
