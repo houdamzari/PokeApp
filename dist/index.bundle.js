@@ -370,7 +370,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  font-family: Helvetica, sans-serif;\r\n  background-color: rgb(255, 197, 37);\r\n\r\n}\r\n\r\n\r\n.navigation {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  padding: 0 4%;\r\n}\r\n\r\n.logo {\r\n  width: 200px;\r\n}\r\n\r\n.navigation ul {\r\n  display: flex;\r\n  list-style: none;\r\n}\r\n\r\n.navigation ul li {\r\n  margin-right: 1.5rem;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: inherit;\r\n}\r\n\r\n.grid {\r\n  display: grid;\r\n  grid-template-columns: auto auto auto auto;\r\n  padding: 10px;\r\n}\r\n\r\n.grid-item {\r\n  background-color: white;\r\n  margin: 2%;\r\n  padding: 20px;\r\n  font-size: 30px;\r\n  text-align: center;\r\n  border-radius: 10px;\r\n}\r\n\r\n.buttonContainer {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 5px;\r\n}\r\n\r\n.pokeimg {\r\n  width: 200px;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  font-family: Helvetica, sans-serif;\r\n  background-color: rgb(255, 197, 37);\r\n}\r\n\r\n.navigation {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  padding: 0 4%;\r\n}\r\n\r\n.logo {\r\n  width: 200px;\r\n}\r\n\r\n.navigation ul {\r\n  display: flex;\r\n  list-style: none;\r\n}\r\n\r\n.navigation ul li {\r\n  margin-right: 1.5rem;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: inherit;\r\n}\r\n\r\n.grid {\r\n  display: grid;\r\n  grid-template-columns: auto auto auto auto;\r\n  padding: 10px;\r\n}\r\n\r\n.grid-item {\r\n  background-color: white;\r\n  margin: 2%;\r\n  padding: 20px;\r\n  font-size: 30px;\r\n  text-align: center;\r\n  border-radius: 10px;\r\n}\r\n\r\n.buttonContainer {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 5px;\r\n}\r\n\r\n.pokeimg {\r\n  width: 200px;\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -487,6 +487,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "fetchData": () => (/* binding */ fetchData)
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(12);
+
 
 let element = '';
 const grid = document.querySelector('.grid');
