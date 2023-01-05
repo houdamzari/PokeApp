@@ -23,5 +23,8 @@
       }
     ]
   },
-  "ignorePatterns": ["dist/", "build/"]
+  "ignorePatterns": ["dist/", "build/"],
+  "settings": {
+    "import/resolver": "webpack"
+  }
 }
