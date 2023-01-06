@@ -114,6 +114,14 @@ To run the project, execute the following command:
  This starts the development server on port: 8080
 ```
 
+### Test
+
+Run `npm i jest-environment-jsdom --save-dev` to install dependencies required to test the project.
+
+```sh
+ npm test
+```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
