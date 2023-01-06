@@ -11,6 +11,7 @@ const PopUp = document.querySelector('.popup');
 const CloseBtn = document.querySelector('.closebtn');
 const MainBody = document.querySelector('.main');
 const NewComments = document.querySelector('.newComment');
+const ModalDetails = document.querySelector('.pokedetails');
 
 //* **Count comments*/
 const countComments = (item) => {
@@ -82,7 +83,7 @@ const gridLogic = (data) => {
     )
     .then((res) => localStorage.setItem('likes', JSON.stringify(res.data)));
   element += `<div class="grid-item">
- <img class="pokeimg" src=${data.sprites.other['official-artwork'].front_default
+ <img id="${data.abilities[0].ability.name}" class="pokeimg" src=${data.sprites.other['official-artwork'].front_default
 } />
   <h3 class="pokename">${data.species.name} </h3>
   <div class="likesContainer"><button class="likeButton" id=${data.id
@@ -121,6 +122,14 @@ const gridLogic = (data) => {
     MainBody.style.filter = 'blur(10px)';
     fetchComment(commentId);
     SubmitBtn.setAttribute('id', commentId);
+    ModalDetails.innerHTML = `
+    <img class="pokeimg-details"
+                src="${e.target.parentElement.parentElement.firstElementChild.src}"
+                alt="popup-image">
+            <h3>${e.target.id}</h3>
+           
+                <p><strong>Special Ability : </strong>${e.target.parentElement.parentElement.firstElementChild.id}</p>
+    `;
   }));
 };
 

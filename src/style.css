@@ -138,11 +138,12 @@ a {
 .popup {
   background: rgb(231, 231, 231);
   width: 60vw;
-  margin: 4% auto;
+  margin: 1% auto;
   border-radius: 10px;
   position: fixed;
-  inset: 5%;
+  inset: 1%;
   transform: translateY(150%);
+  height: 90vh;
 }
 
 .modal {
@@ -206,4 +207,18 @@ button {
 
 .pokename {
   color: #3d1d5e;
+}
+
+.footer {
+  background: rgb(6, 15, 34);
+}
+
+.pokedetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokeimg-details {
+  width: 120px;
 }
