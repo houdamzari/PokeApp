@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible"
-        content="IE=edge">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Capstone</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Capstone</title>
+    </head>
 
-<body>
-    <main class="main">
-        <header>
-            <nav class="navigation">
+    <body>
+        <main class="main">
+            <header>
+                <nav class="navigation">
 
-                <div class='pokemon'></div>
-                <ul>
-                    <li> <a href="#"> Pokemons(20)</a></li>
-                    <li> <a href="#"> Popular</a></li>
-                    <li> <a href="#"> About</a></li>
+                    <div class='pokemon'></div>
+                    <ul>
+                        <li> <a href="#"> Pokemons <span class='counter'></span></a></li>
+                        <li> <a href="#"> Popular</a></li>
+                        <li> <a href="#"> About</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="grid"></div>
+        </main>
+        <div class="popup">
+            <div class="closecontain">
+                <div id="closepop">
+                    <p class="closebtn">+</p>
+                </div>
+            </div>
+            <div class="modal">
+                <ul class="newComment">
                 </ul>
-            </nav>
-        </header>
-        <div class="grid"></div>
-    </main>
-    <div class="popup">
-        <div class="closecontain">
-            <div id="closepop">
-                <p class="closebtn">+</p>
+                <div class="comment-form">
+                    <input type="text" id="name" required placeholder="Your Name (Required)">
+                    <input type="text" id="comment" required placeholder="Your Comment">
+                    <button type="button" class="submit-comment">comment</button>
+                </div>
             </div>
         </div>
         <div class="modal">
@@ -40,6 +48,13 @@
 
             </ul>
             <div class="comment-form">
+<<<<<<< HEAD
+                <input type="text" id="name" required placeholder="Your Name (Required)">
+                <input type="text" id="comment" required placeholder="Your Comment">
+                <button class="submit-comment">comment</button>
+            </div>
+        </div>
+=======
                 <input type="text"
                     id="name"
                     required
@@ -54,5 +69,8 @@
         </div>
 
 </body>
+=======
+>>>>>>> 1cde6981fdeebae120aea7126abe5d4a416dbd50
+    </body>
 
 </html>
