@@ -1,8 +1,9 @@
 import axios from 'axios';
-
+import itemsCounter from './itemsCounter';
 let element = '';
 const grid = document.querySelector('.grid');
 const appId = '91WxoTjxGWkdx6jiMCZQ';
+const select = document.querySelector('.counter');
 const baseURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}`;
 const SubmitBtn = document.querySelector('.submit-comment');
 const Name = document.querySelector('#name');
@@ -93,6 +94,7 @@ const gridLogic = (data) => {
   </div>`;
   grid.innerHTML = element;
   const commentButton = document.querySelectorAll('.commentbtn');
+<<<<<<< Updated upstream
   const likeButton = document.querySelectorAll('.likeButton');
   const likingHandle = () => {
     likeButton.forEach((button) => button.addEventListener('click', () => {
@@ -114,14 +116,21 @@ const gridLogic = (data) => {
     }));
   };
   likingHandle();
+=======
+
+  select.innerHTML = `(${itemsCounter('.grid-item')})`;
+
+>>>>>>> Stashed changes
   //* **Comment button behaviour inside the Pokemon Cards */
-  commentButton.forEach((element) => element.addEventListener('click', (e) => {
-    const commentId = e.target.id;
-    PopUp.classList.add('showpop');
-    MainBody.style.filter = 'blur(10px)';
-    fetchComment(commentId);
-    SubmitBtn.setAttribute('id', commentId);
-  }));
+  commentButton.forEach((element) =>
+    element.addEventListener('click', (e) => {
+      const commentId = e.target.id;
+      PopUp.classList.add('showpop');
+      MainBody.style.filter = 'blur(10px)';
+      fetchComment(commentId);
+      SubmitBtn.setAttribute('id', commentId);
+    })
+  );
 };
 
 //* **Fetch Pokemons from Poke API */
