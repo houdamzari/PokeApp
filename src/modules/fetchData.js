@@ -1,5 +1,6 @@
 import axios from 'axios';
 import itemsCounter from './itemsCounter';
+
 let element = '';
 const grid = document.querySelector('.grid');
 const appId = '91WxoTjxGWkdx6jiMCZQ';
@@ -83,18 +84,20 @@ const gridLogic = (data) => {
     )
     .then((res) => localStorage.setItem('likes', JSON.stringify(res.data)));
   element += `<div class="grid-item">
- <img class="pokeimg" src=${data.sprites.other['official-artwork'].front_default
+ <img class="pokeimg" src=${
+  data.sprites.other['official-artwork'].front_default
 } />
   <h3 class="pokename">${data.species.name} </h3>
-  <div class="likesContainer"><button class="likeButton" id=${data.id
+  <div class="likesContainer"><button class="likeButton" id=${
+  data.id
 }>&#x2764;</button><p>  ${postLikeNumber || '0'} Likes</p></div>
 
-  <div class="buttonContainer"><button class="commentbtn" id="${data.species.name
+  <div class="buttonContainer"><button class="commentbtn" id="${
+  data.species.name
 }">Comment</button></div>
   </div>`;
   grid.innerHTML = element;
   const commentButton = document.querySelectorAll('.commentbtn');
-<<<<<<< Updated upstream
   const likeButton = document.querySelectorAll('.likeButton');
   const likingHandle = () => {
     likeButton.forEach((button) => button.addEventListener('click', () => {
@@ -116,21 +119,17 @@ const gridLogic = (data) => {
     }));
   };
   likingHandle();
-=======
 
   select.innerHTML = `(${itemsCounter('.grid-item')})`;
 
->>>>>>> Stashed changes
   //* **Comment button behaviour inside the Pokemon Cards */
-  commentButton.forEach((element) =>
-    element.addEventListener('click', (e) => {
-      const commentId = e.target.id;
-      PopUp.classList.add('showpop');
-      MainBody.style.filter = 'blur(10px)';
-      fetchComment(commentId);
-      SubmitBtn.setAttribute('id', commentId);
-    })
-  );
+  commentButton.forEach((element) => element.addEventListener('click', (e) => {
+    const commentId = e.target.id;
+    PopUp.classList.add('showpop');
+    MainBody.style.filter = 'blur(10px)';
+    fetchComment(commentId);
+    SubmitBtn.setAttribute('id', commentId);
+  }));
 };
 
 //* **Fetch Pokemons from Poke API */
