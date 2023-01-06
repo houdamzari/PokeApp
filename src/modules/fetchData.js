@@ -1,5 +1,5 @@
 import axios from 'axios';
-import itemsCounter from './itemsCounter';
+import itemsCounter from './itemsCounter.js';
 
 let element = '';
 const grid = document.querySelector('.grid');
