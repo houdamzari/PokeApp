@@ -1,7 +1,8 @@
 body {
   font-family: cursive, sans-serif;
   background-image:
-    linear-gradient(to right top,
+    linear-gradient(
+      to right top,
       #242424,
       #2f2e34,
       #383946,
@@ -13,7 +14,8 @@ body {
       #6b68a6,
       #7e69b0,
       #9468b8,
-      #ac65bc);
+      #ac65bc
+    );
 }
 
 .navigation {
@@ -82,9 +84,11 @@ a {
 .grid-item {
   background: rgb(238, 174, 202);
   background:
-    radial-gradient(circle,
+    radial-gradient(
+      circle,
       rgba(238, 174, 202, 1) 0%,
-      rgba(148, 187, 233, 1) 100%);
+      rgba(148, 187, 233, 1) 100%
+    );
   margin: 2%;
   padding: 20px;
   font-size: 30px;
@@ -167,6 +171,10 @@ a {
   text-align: center;
 }
 
+.footer p {
+  font-size: 1.5rem;
+}
+
 #closepop p {
   transform: rotate(45deg);
   font-size: 1.2rem;
@@ -212,10 +220,6 @@ button {
   display: flex;
   height: 100px;
   align-items: center;
-}
-
-.footer p {
-  font-size: 1.5rem;
 }
 
 .devname {
