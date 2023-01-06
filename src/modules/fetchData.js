@@ -13,6 +13,7 @@ const PopUp = document.querySelector('.popup');
 const CloseBtn = document.querySelector('.closebtn');
 const MainBody = document.querySelector('.main');
 const NewComments = document.querySelector('.newComment');
+const ModalDetails = document.querySelector('.pokedetails');
 
 //* **Count comments*/
 const countComments = (item) => {
@@ -129,6 +130,14 @@ const gridLogic = (data) => {
     MainBody.style.filter = 'blur(10px)';
     fetchComment(commentId);
     SubmitBtn.setAttribute('id', commentId);
+    ModalDetails.innerHTML = `
+    <img class="pokeimg-details"
+                src="${e.target.parentElement.parentElement.firstElementChild.src}"
+                alt="popup-image">
+            <h3>${e.target.id}</h3>
+           
+                <p><strong>Special Ability : </strong>${e.target.parentElement.parentElement.firstElementChild.id}</p>
+    `;
   }));
 };
 
