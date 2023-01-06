@@ -84,13 +84,13 @@ const gridLogic = (data) => {
     .then((res) => localStorage.setItem('likes', JSON.stringify(res.data)));
   element += `<div class="grid-item">
  <img id="${data.abilities[0].ability.name}" class="pokeimg" src=${data.sprites.other['official-artwork'].front_default
-} />
+    } />
   <h3 class="pokename">${data.species.name} </h3>
   <div class="likesContainer"><button class="likeButton" id=${data.id
-}>&#x2764;</button><p>  ${postLikeNumber || '0'} Likes</p></div>
+    }>&#x2764;</button><p>  ${postLikeNumber || '0'} Likes</p></div>
 
   <div class="buttonContainer"><button class="commentbtn" id="${data.species.name
-}">Comment</button></div>
+    }">Comment</button></div>
   </div>`;
   grid.innerHTML = element;
   const commentButton = document.querySelectorAll('.commentbtn');

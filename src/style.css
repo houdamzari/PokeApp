@@ -1,8 +1,7 @@
 body {
   font-family: cursive, sans-serif;
   background-image:
-    linear-gradient(
-      to right top,
+    linear-gradient(to right top,
       #242424,
       #2f2e34,
       #383946,
@@ -14,8 +13,7 @@ body {
       #6b68a6,
       #7e69b0,
       #9468b8,
-      #ac65bc
-    );
+      #ac65bc);
 }
 
 .navigation {
@@ -84,11 +82,9 @@ a {
 .grid-item {
   background: rgb(238, 174, 202);
   background:
-    radial-gradient(
-      circle,
+    radial-gradient(circle,
       rgba(238, 174, 202, 1) 0%,
-      rgba(148, 187, 233, 1) 100%
-    );
+      rgba(148, 187, 233, 1) 100%);
   margin: 2%;
   padding: 20px;
   font-size: 30px;
@@ -211,6 +207,19 @@ button {
 
 .footer {
   background: rgb(6, 15, 34);
+  color: white;
+  justify-content: center;
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 1.5rem;
+}
+
+.devname {
+  color: rgb(253, 119, 144);
 }
 
 .pokedetails {
@@ -221,4 +230,14 @@ button {
 
 .pokeimg-details {
   width: 120px;
+}
+
+.commentbtn {
+  width: 45%;
+  border: 0;
+  border-radius: 5px;
+  align-self: center;
+  color: white;
+  background: rgb(6, 116, 180);
+  padding: 4% 5%;
 }
