@@ -1,8 +1,10 @@
 import axios from 'axios';
+import itemsCounter from './itemsCounter.js';
 
 let element = '';
 const grid = document.querySelector('.grid');
 const appId = '91WxoTjxGWkdx6jiMCZQ';
+const select = document.querySelector('.counter');
 const baseURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}`;
 const SubmitBtn = document.querySelector('.submit-comment');
 const Name = document.querySelector('#name');
@@ -83,14 +85,17 @@ const gridLogic = (data) => {
     )
     .then((res) => localStorage.setItem('likes', JSON.stringify(res.data)));
   element += `<div class="grid-item">
- <img id="${data.abilities[0].ability.name}" class="pokeimg" src=${data.sprites.other['official-artwork'].front_default
-    } />
+ <img class="pokeimg" src=${
+  data.sprites.other['official-artwork'].front_default
+} />
   <h3 class="pokename">${data.species.name} </h3>
-  <div class="likesContainer"><button class="likeButton" id=${data.id
-    }>&#x2764;</button><p>  ${postLikeNumber || '0'} Likes</p></div>
+  <div class="likesContainer"><button class="likeButton" id=${
+  data.id
+}>&#x2764;</button><p>  ${postLikeNumber || '0'} Likes</p></div>
 
-  <div class="buttonContainer"><button class="commentbtn" id="${data.species.name
-    }">Comment</button></div>
+  <div class="buttonContainer"><button class="commentbtn" id="${
+  data.species.name
+}">Comment</button></div>
   </div>`;
   grid.innerHTML = element;
   const commentButton = document.querySelectorAll('.commentbtn');
@@ -115,6 +120,9 @@ const gridLogic = (data) => {
     }));
   };
   likingHandle();
+
+  select.innerHTML = `(${itemsCounter('.grid-item')})`;
+
   //* **Comment button behaviour inside the Pokemon Cards */
   commentButton.forEach((element) => element.addEventListener('click', (e) => {
     const commentId = e.target.id;
