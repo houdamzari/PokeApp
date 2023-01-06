@@ -12,6 +12,11 @@ const CloseBtn = document.querySelector('.closebtn');
 const MainBody = document.querySelector('.main');
 const NewComments = document.querySelector('.newComment');
 
+//* **Count comments*/
+const countComments = (item) => {
+  document.querySelector('#commentcount').innerHTML = `Comments (${item})`;
+};
+
 //* ***fetch comment and show to the popup */
 const fetchComment = async (itemId) => {
   const response = await fetch(`${baseURL}/comments?item_id=${itemId}`);
@@ -23,9 +28,12 @@ const fetchComment = async (itemId) => {
       NewComments.innerHTML += `
             <li>${element.creation_date} ${element.username} : ${element.comment}</li>
             `;
+      // **Count comments */
+      countComments(Comments.length);
     });
   } else {
     NewComments.innerHTML = '';
+    document.querySelector('#commentcount').innerHTML = 'Comments (0)';
   }
 };
 
@@ -74,16 +82,13 @@ const gridLogic = (data) => {
     )
     .then((res) => localStorage.setItem('likes', JSON.stringify(res.data)));
   element += `<div class="grid-item">
- <img class="pokeimg" src=${
-  data.sprites.other['official-artwork'].front_default
+ <img class="pokeimg" src=${data.sprites.other['official-artwork'].front_default
 } />
   <h3 class="pokename">${data.species.name} </h3>
-  <div class="likesContainer"><button class="likeButton" id=${
-  data.id
+  <div class="likesContainer"><button class="likeButton" id=${data.id
 }>&#x2764;</button><p>  ${postLikeNumber || '0'} Likes</p></div>
 
-  <div class="buttonContainer"><button class="commentbtn" id="${
-  data.species.name
+  <div class="buttonContainer"><button class="commentbtn" id="${data.species.name
 }">Comment</button></div>
   </div>`;
   grid.innerHTML = element;
