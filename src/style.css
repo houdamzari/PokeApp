@@ -171,6 +171,10 @@ a {
   text-align: center;
 }
 
+.footer p {
+  font-size: 1.5rem;
+}
+
 #closepop p {
   transform: rotate(45deg);
   font-size: 1.2rem;
@@ -211,6 +215,15 @@ button {
 
 .footer {
   background: rgb(6, 15, 34);
+  color: white;
+  justify-content: center;
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+
+.devname {
+  color: rgb(253, 119, 144);
 }
 
 .pokedetails {
@@ -221,4 +234,14 @@ button {
 
 .pokeimg-details {
   width: 120px;
+}
+
+.commentbtn {
+  width: 45%;
+  border: 0;
+  border-radius: 5px;
+  align-self: center;
+  color: white;
+  background: rgb(6, 116, 180);
+  padding: 4% 5%;
 }
