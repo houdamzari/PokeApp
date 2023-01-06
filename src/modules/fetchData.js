@@ -62,14 +62,53 @@ CloseBtn.addEventListener('click', () => {
 
 //* **Load data after fetching data from Poke API */
 const gridLogic = (data) => {
+  const numberlikes = JSON.parse(localStorage.getItem('likes'));
+  const postLikes = Array.isArray(numberlikes) ? numberlikes : [];
+  let postLikeNumber;
+  // eslint-disable-next-line no-return-assign
+  postLikes.forEach((like) => (parseInt(like.item_id, 10) === data.id ? (postLikeNumber = like.likes) : ''));
+
+  axios
+    .get(
+      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/likes`,
+    )
+    .then((res) => localStorage.setItem('likes', JSON.stringify(res.data)));
   element += `<div class="grid-item">
- <img class="pokeimg" src=${data.sprites.other['official-artwork'].front_default} />
-  <h3 class="pokename">${data.species.name}</h3>
-  <div class="buttonContainer"><button class="commentbtn" id="${data.species.name}">Comment</button></div>
+ <img class="pokeimg" src=${
+  data.sprites.other['official-artwork'].front_default
+} />
+  <h3 class="pokename">${data.species.name} </h3>
+  <div class="likesContainer"><button class="likeButton" id=${
+  data.id
+}>&#x2764;</button><p>  ${postLikeNumber || '0'} Likes</p></div>
+
+  <div class="buttonContainer"><button class="commentbtn" id="${
+  data.species.name
+}">Comment</button></div>
   </div>`;
   grid.innerHTML = element;
   const commentButton = document.querySelectorAll('.commentbtn');
-
+  const likeButton = document.querySelectorAll('.likeButton');
+  const likingHandle = () => {
+    likeButton.forEach((button) => button.addEventListener('click', () => {
+      axios
+        .post(
+          `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/likes`,
+          { item_id: button.id },
+        )
+        .then(() => setTimeout(() => {
+          element = '';
+          // eslint-disable-next-line no-use-before-define
+          fetchData();
+        }, 1000));
+      setTimeout(() => {
+        element = '';
+        // eslint-disable-next-line no-use-before-define
+        fetchData();
+      }, 1000);
+    }));
+  };
+  likingHandle();
   //* **Comment button behaviour inside the Pokemon Cards */
   commentButton.forEach((element) => element.addEventListener('click', (e) => {
     const commentId = e.target.id;
@@ -83,7 +122,7 @@ const gridLogic = (data) => {
 //* **Fetch Pokemons from Poke API */
 export const fetchData = () => {
   axios
-    .get(' https://pokeapi.co/api/v2/pokemon?limit=40&offset=0')
+    .get(' https://pokeapi.co/api/v2/pokemon?limit=20&offset=0')
     .then((res) => {
       const data = res.data.results;
       data.forEach((el) => {

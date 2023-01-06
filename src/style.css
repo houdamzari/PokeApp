@@ -1,6 +1,21 @@
 body {
   font-family: cursive, sans-serif;
-  background-image: linear-gradient(to right top, #242424, #2f2e34, #383946, #414558, #48516b, #4e587a, #545f8a, #5c6699, #6b68a6, #7e69b0, #9468b8, #ac65bc);
+  background-image:
+    linear-gradient(
+      to right top,
+      #242424,
+      #2f2e34,
+      #383946,
+      #414558,
+      #48516b,
+      #4e587a,
+      #545f8a,
+      #5c6699,
+      #6b68a6,
+      #7e69b0,
+      #9468b8,
+      #ac65bc
+    );
 }
 
 .navigation {
@@ -21,6 +36,29 @@ body {
 .navigation ul {
   display: flex;
   list-style: none;
+}
+
+.likeButton {
+  background-color: transparent;
+  border: none;
+  color: red;
+  font-size: 35px;
+}
+
+.likesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.likesContainer p {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
 }
 
 .newComment li {
@@ -45,7 +83,12 @@ a {
 
 .grid-item {
   background: rgb(238, 174, 202);
-  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  background:
+    radial-gradient(
+      circle,
+      rgba(238, 174, 202, 1) 0%,
+      rgba(148, 187, 233, 1) 100%
+    );
   margin: 2%;
   padding: 20px;
   font-size: 30px;
