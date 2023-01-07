@@ -85,7 +85,7 @@ const gridLogic = (data) => {
     )
     .then((res) => localStorage.setItem('likes', JSON.stringify(res.data)));
   element += `<div class="grid-item">
- <img class="pokeimg" src=${data.sprites.other['official-artwork'].front_default
+ <img id="${data.abilities[0].ability.name}" class="pokeimg" src=${data.sprites.other['official-artwork'].front_default
 } />
   <h3 class="pokename">${data.species.name} </h3>
   <div class="likesContainer"><button class="likeButton" id=${data.id

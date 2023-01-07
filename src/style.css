@@ -66,6 +66,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .newComment li {
@@ -265,6 +266,58 @@ button {
   }
 
   .footer p {
+    font-size: 1rem;
+  }
+
+  .popup {
+    width: 90vw;
+    height: auto;
+  }
+
+  .comment-form {
+    width: 75%;
+  }
+
+  input {
+    padding: 5%;
+  }
+
+  .newComment {
+    width: 64.5%;
+    margin-bottom: 3%;
+    padding: 2% 5%;
+  }
+
+  .closecontain {
+    padding: 5%;
+  }
+
+  #closepop p {
+    font-size: 2.5rem;
+    margin-left: 0.3rem;
+    margin-top: -13px;
+  }
+
+  .pokeimg-details {
+    width: 50%;
+  }
+
+  .modal h3 {
+    font-size: 2rem;
+    margin: 3% 0;
+  }
+
+  #commentcount {
+    margin: 5% 0;
+  }
+
+  .newComment li {
+    font-size: 0.9rem;
+  }
+
+  .submit-comment {
+    width: 70%;
+    margin: 3% 0;
     font-size: 1rem;
   }
 }
