@@ -85,16 +85,15 @@ const gridLogic = (data) => {
     )
     .then((res) => localStorage.setItem('likes', JSON.stringify(res.data)));
   element += `<div class="grid-item">
- <img class="pokeimg" src=${
-  data.sprites.other['official-artwork'].front_default
+ <img class="pokeimg" src=${data.sprites.other['official-artwork'].front_default
 } />
   <h3 class="pokename">${data.species.name} </h3>
-  <div class="likesContainer"><button class="likeButton" id=${
-  data.id
-}>&#x2764;</button><p>  ${postLikeNumber || '0'} Likes</p></div>
+  <div class="likesContainer"><button class="likeButton" id=${data.id
+}><span class="material-symbols-outlined">
+    favorite
+    </span></button><p>  ${postLikeNumber || '0'} Likes</p></div>
 
-  <div class="buttonContainer"><button class="commentbtn" id="${
-  data.species.name
+  <div class="buttonContainer"><button class="commentbtn" id="${data.species.name
 }">Comment</button></div>
   </div>`;
   grid.innerHTML = element;
@@ -102,6 +101,7 @@ const gridLogic = (data) => {
   const likeButton = document.querySelectorAll('.likeButton');
   const likingHandle = () => {
     likeButton.forEach((button) => button.addEventListener('click', () => {
+      document.getElementById(button.id).innerHTML = '&#10084;';
       axios
         .post(
           `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/likes`,
