@@ -66,7 +66,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://raw.githack.com/PrantoshB/JavaScript-Capstone/dev/dist/index.html)
+- [Live Demo Link](https://prantoshb.github.io/JavaScript-Capstone/dist/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
