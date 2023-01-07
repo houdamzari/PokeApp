@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
 body {
-  font-family: cursive, sans-serif;
+  font-family: 'Comic Neue', cursive;
   background-image:
     linear-gradient(
       to right top,
@@ -41,15 +43,20 @@ body {
 .likeButton {
   background-color: transparent;
   border: none;
-  color: red;
-  font-size: 35px;
+  color: rgb(221, 3, 3);
+  font-size: 1.5rem;
+}
+
+.likeButton span {
+  margin-top: 5px;
 }
 
 .likesContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
+  padding: 0 8%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .likesContainer p {
@@ -58,7 +65,7 @@ body {
   gap: 5px;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 1.3rem;
 }
 
 .newComment li {
@@ -100,6 +107,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  margin-top: 5%;
 }
 
 .pokeimg {
@@ -211,6 +219,7 @@ button {
 
 .pokename {
   color: #3d1d5e;
+  margin: 2px;
 }
 
 .footer {
@@ -244,4 +253,18 @@ button {
   color: white;
   background: rgb(6, 116, 180);
   padding: 4% 5%;
+}
+
+@media only screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: auto;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .footer p {
+    font-size: 1rem;
+  }
 }
